@@ -9,6 +9,7 @@ function* getList() {
     const action = initListAction(res.data)
     yield put(action)
    } catch (e) {
+     console.log('网络请求失败')
    }
 }
 
