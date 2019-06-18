@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import store from './store/index'
-import { getInputChangeAction, getAddItemAction, getDeleteItemAction, getTodoList } from './store/actionCreators'
+import { getInputChangeAction, getAddItemAction, getDeleteItemAction, getListAction } from './store/actionCreators'
 import AntTodoListUI from './antTodoListUI'
 
 class TodoListAnt extends Component {
@@ -25,7 +25,7 @@ class TodoListAnt extends Component {
     )
   }
   componentDidMount () {
-    const action = getTodoList()
+    const action = getListAction()
     store.dispatch(action)
   }
   handleInputChange(e) {
